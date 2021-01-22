@@ -16,15 +16,15 @@ def send_mail(app, form):
     mail = Mail(app)
 
     msg = Message("Thanks for your RSVP!",
-        sender="mailer-daemon@davenquinn.com",
-        reply_to="Daven and Beth <wedding@davenquinn.com>",
-        extra_headers={"From":"Daven and Beth via davenquinn.com <mail@davenquinn.com>"})
+        sender="Dóri és Martin <doriesmartin+rsvp-reply@gmail.com>",
+        reply_to="Dóri és Martin <doriesmartin+rsvp-reply@gmail.com>",
+        charset="utf-8")
 
     if app.config["DEBUG"]:
-        msg.recipients = ['test@davenquinn.com']
+        msg.recipients = ["doriesmartin+test@gmail.com"]
     else:
         msg.recipients = [form["email"]]
-        msg.bcc = ["wedding@davenquinn.com"]
+        msg.bcc = ["doriesmartin+rsvp@gmail.com"]
 
     _ = partial(render_template,
         form=form,
@@ -62,6 +62,6 @@ def save_file(app, form):
         w(form["message"])
 
 def complete_rsvp(app, form):
-    save_file(app, form)
+    # save_file(app, form)
     send_mail(app, form)
 

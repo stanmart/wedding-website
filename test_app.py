@@ -3,6 +3,10 @@
 from flask import Flask
 from wedding_website import wedding
 import os
+import json
+
+with open("./secrets.json", "r") as secrets:
+    secrets_dict = json.load(secrets)
 
 class TestConfig(object):
     """
@@ -22,8 +26,8 @@ class TestConfig(object):
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 465
     MAIL_USE_SSL = True
-    MAIL_USERNAME = 'you@gmail.com'
-    MAIL_PASSWORD = '*************'
+    MAIL_USERNAME = secrets_dict['gmail']['username']
+    MAIL_PASSWORD = secrets_dict['gmail']['password']
     DEFAULT_MAIL_SENDER = MAIL_USERNAME
 
     # If desired, set to a directory to
