@@ -40,6 +40,12 @@ form {
     .factoid {
         display: none;
     }
+    input#name {
+        width: 20em;
+    }
+    input#email {
+        width: 20em;
+    }
     div.number {
         margin-top: 1em;
         label {
