@@ -8,16 +8,17 @@ def no_robots(form, field):
 
 def required(form, field):
     if field.data is None:
-        raise ValidationError("This field is required.")
+        raise ValidationError("Ezt a mezőt kötelező kitölteni")
 
 class RSVPForm(Form):
-      name = TextField('Name', [Required(), Length(5)])
-      email = TextField('Email address',
+      name = TextField('Név', [Required(), Length(5)])
+      email = TextField('Email cím',
           [Required(), Email()])
       factoid = TextField('Another form of ID', [no_robots])
       number = IntegerField(
-          '# of Guests',
+          'Vendégek száma',
           [required],
-          description="The number of guests in your party that will be attending.")
-      message = TextAreaField('Message', description="An optional message to send with your response!")
-      submit = SubmitField("RSVP")
+          description="Összesen hányan lesztek (veled együtt)")
+      name_list = TextAreaField('Név szerint', description="Kérlek soronként egy nevet írj!")
+      message = TextAreaField('Üzenet', description="Ha szeretnél nekünk üzenni valamit (pl. ételérzékenység)")
+      submit = SubmitField("Küldés")

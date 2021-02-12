@@ -1,17 +1,23 @@
-<p>Dear {{ form.name }},</p>
+<p>Kedves {{ form.name }}!</p>
 
-<p>Thanks for responding to our invitation to the wedding! You said {{ form.number}} of your party were attending. {% if attending %}We'll see you in October to celebrate!{% else %}We're sorry you can't make it! You'll have to be our ambassadors to the rest of the world.{% endif %}</p>
+<p>Köszönjük, hogy visszajeleztél. Azt írtad, hogy összesen {{ form.number }} vendégre számíthatunk tőletek. {% if attending %} Találkozunk áprilisban! {% else %} Sajnáljuk, hogy most nem tudunk találkozni. Pótoljuk be minél hamarabb! {% endif %} </p>
 
-<p>Feel free to return to the wedding website at <a target=_blank href="http://davenquinn.com/wedding/">davenquinn.com/wedding</a> for answers to any questions you might have. If you're still searching (or just want to say hello!) feel free to email us at <a target=_blank href="mailto:wedding@davenquinn.com">wedding@davenquinn.com</a>!</p>
+<p>Ha bármilyen további információra van szükséged, nézz szét a <a target=_blank href="https://www.doriesmartin.hu/">weboldalon</a>. Ha valamit kérdeznél tőlünk, vagy csak írnál nekünk, megteheted a <a target=_blank href="mailto:doriesmartin+rsvp-reply@gmail.com">doriesmartin@gmail.com</a> email címen, vagy erre az emailre is válaszolhatsz.</p>
 
-<p>Yours,<br />
-Beth and Daven</p>
+<p>Üdv,<br />
+Dóri és Martin</p>
 
-<p><em>October 11, 2014 &middot; Cary, North Carolina</em></p>
+<p><em>2021. április 24. &middot; Dunai Csónakház, Budapest</em></p>
+
+<hr>
+
+{% if attending %}
+<p>Vendégek:</p>
+<pre>{{ form.name_list }}</pre>
+{% endif %}
 
 {% if form.message %}
-<hr>
-<p>Below is the message that you sent us:</p>
+<p>Az alábbi üzenetet küldted nekünk:</p>
 <blockquote>
 {{ form.message }}
 </blockquote>

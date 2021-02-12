@@ -15,7 +15,7 @@ def send_mail(app, form):
     """
     mail = Mail(app)
 
-    msg = Message("Thanks for your RSVP!",
+    msg = Message("Köszönjük a visszajelzést!",
         sender="Dóri és Martin <doriesmartin+rsvp-reply@gmail.com>",
         reply_to="Dóri és Martin <doriesmartin+rsvp-reply@gmail.com>",
         charset="utf-8")
@@ -54,10 +54,12 @@ def save_file(app, form):
         pass
 
     with (directory/fn).open("w") as f:
-        w = lambda s: print(s,file=f)
+        def w(s):
+            print(s, file=f)
         w("Name: "+form["name"])
         w("Email:"+form["email"])
         w("No. attending: "+str(form["number"]))
+        w("Guest names: {}".format(", ".join(form["name_list"].split("\n"))))
         w("Message:")
         w(form["message"])
 

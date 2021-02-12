@@ -5,3 +5,4 @@ build/
 secrets.json
 .vscode/
 __pycache__/
+raw_media/

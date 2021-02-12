@@ -1,35 +1,48 @@
 {% extends "wedding/base.html" %}
 {% block content %}
-    <h2>Ceremony and reception</h2>
-    <p>Our wedding ceremony and reception are both at the <strong>Matthews House</strong> in downtown Cary. The ceremony will begin at 4:30 pm and will last approximately half an hour. The reception will follow shortly thereafter and last until approximately 10 pm.</p>
-    <div class=location>
-        <a class=left target=_blank href="https://www.google.com/maps/place/The+Matthews+House/@35.7808314,-78.7852258,12z/">
-            <p class=address>The Matthews House<br/>317 W Chatham Street<br/>Cary, NC 27511</p>
-        </a>
-        <div class=map>[35.786884, -78.786215]</div>
+    <h2 class="section-title">Szertartás és buli</h2>
+    <div>
+        <img src="{{url_for('.static', filename='images/lego/harry.png')}}"
+            alt="Lego Harry Potter"
+            width="120px"
+            style="float: left" />
+        <p>A szertartást és az azt követő evést-ivást-táncot is a <strong>Dunai Csónakházban</strong> fojuk tartani. A szertartás (a jelen állás szerint) <strong>17:00-kor</strong> kezdődik. Utána csoportképek, vacsora, majd pedig tánc, torta és még több tánc következik.</p>
+        <p>Reméljük, az eredeti terveknek megfelelően meg tudjuk tartani az esküvőt. Azonban ha a Covid-19-20-21 miatt ez még is akadályokba ütközne, írni fogunk neked. Ezen a weboldalon mindnig a legfrisebb információkat találhatod.</p>
     </div>
-    <h2>Where to stay</h2>
-    <p>We have reserved a block of rooms at a discounted rate at the <strong>Homewood Inn &amp; Suites</strong> in southeast Cary.
-    It's about 12 miles from the Raleigh-Durham International Airport and convenient to the downtowns of Raleigh and Cary.
-    The hotel offers complimentary breakfast, internet, and shuttle rides to locations
-    within a three-mile radius. We have arranged for rides between the Matthews House and the hotel on our wedding day.
     <div class=location>
-        <a class=left target=_blank href="https://www.google.com/maps/place/Homewood+Suites+by+Hilton+Raleigh%2FCary/@35.737533,-78.8407849,12z/">
-            <p class=address>Homewood Suites<br />100 MacAlyson Ct.<br/>Cary, NC 27511</p>
+        <a class=left target=_blank href="https://www.google.com/maps/place/VakVarjú+Csónakház/@47.4321295,19.0910283,12z/">
+            <p class=address>Dunai Csónakház<br/>Budapest, 20. ker<br/>Vízisport u. 12-18</p>
         </a>
-        <div class=map>[35.734667, -78.801417]</div>
+        <div class=map>[47.4321295, 19.0910283]</div>
     </div>
-    <p>Please book before September 9th to receive the discounted group rate.</p>
+
+    <h2 class="section-title">Szállás</h2>
+    <div>
+        <img src="{{url_for('.static', filename='images/lego/yoda.png')}}"
+            alt="Lego Mandalorian"
+            width="150px"
+            style="float: right" />
+        <p>Közös szállásfoglalást nem intéztünk. Ha valakinek szüksége van rá, a legközelebbi szálloda a <strong>Duna Garden Hotel</strong> a rendezvényhelyszín közvetlen szomszédjában.</p>
+    </div>
+    <div class=location>
+        <a class=left target=_blank href="https://www.google.com/maps/place/Duna+Garden+Hotel/@47.4334225,19.0905248,12z/">
+            <p class=address>Duna Garden Hotel<br/>Budapest, 20. ker<br/>Vízisport u. 12</p>
+        </a>
+        <div class=map>[47.4334225, 19.0905248]</div>
+    </div>
     <p class=center>
-        <a class=button target=_blank href="http://homewoodsuites.hilton.com/en/hw/groups/personalized/C/CRYHSHW-SQW-20141009/index.jhtml" class="button">Book Now</a>
+        <a class=button target=_blank href="https://www.dunagarden.hu/szobafoglalas/" class="button">Foglalás</a>
     </p>
-    <h2>Registry</h2>
-    <p>We're really happy just to have the opportunity to celebrate with you.
-        But if you'd like to purchase a gift, we hope that the below
-        registries will make it easier for you to select something
-        that suits our (sometimes peculiar) tastes.</p>
-    <div class="registries">
-        <a target="_blank" href="http://www.amazon.com/registry/wedding/3DPSM3J4ZEVTU" class="amazon">Amazon</a>
-        <a target="_blank" href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=541034016" class="bedbathbeyond">Bed, Bath, &amp; Beyond</a>
+
+    <h2 class="section-title">Nászajándék</h2>
+    <div>
+        <img src="{{url_for('.static', filename='images/lego/dobby.png')}}"
+            alt="Lego Dobby"
+            width="80px"
+            style="float: left" />
+        <p>Nagyon hálásak vagyunk, ha adni szeretnél nekünk valamit. Mivel azonban
+        Svájcban lakunk, és korlátos a poggyász mérete, inkább a borítékokat preferáljuk
+        a dobozokkal szemben. 🙏
+        </p>
     </div>
 {% endblock %}

@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Beth and Daven!</title>
+        <title>Dóri és Martin</title>
         <meta name="description" content="">
         <meta id="view" name="viewport" content="width=device-width" />
         <link href='//fonts.googleapis.com/css?family=Noticia+Text:400,700,400italic|Raleway:400,300,500' rel='stylesheet' type='text/css'>
@@ -25,14 +25,14 @@
                         </h1>
                     </div>
                     <h2 class=subtitle>
-                        <span class=date>Saturday, October 11, 2014</span>
+                        <span class=date>2021. április 24.</span>
                         <span class=sep> &middot; </span>
-                        <span class=location>Cary, North Carolina</span>
+                        <span class=location>Dunai Csónakház, Budapest</span>
                     </h2>
                     <ul id="nav">
-                      {{ nav_link("wedding.story", "Story") }}
-                      {{ nav_link("wedding.details","Details") }}
-                      {{ nav_link("wedding.rsvp","RSVP") }}
+                        {{ nav_link("wedding.details","Részletek") }}
+                        {{ nav_link("wedding.rsvp","RSVP") }}
+                        {{ nav_link("wedding.story", "Fényképek") }}
                     </ul>
                 </header>
                 <div id="content">
@@ -41,9 +41,9 @@
             </div>
             <div id="main-footer"></div>
         </div>
-        <footer id="footer" class="row">
+        <!-- <footer id="footer" class="row">
             <p>Site designed by with love by <a href="/">the groom</a>.
-        </footer>
+        </footer> -->
         {% block scripts %}
         <script src="{{url_for('.static',filename='wedding.js')}}"></script>
         {% endblock %}

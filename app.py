@@ -42,7 +42,7 @@ app = Flask(__name__)
 app.config.from_object(TestConfig)
 
 # We need a google maps key set now
-app.config['GOOGLE_MAPS_KEY'] = os.getenv('GOOGLE_MAPS_KEY')
+app.config['GOOGLE_MAPS_KEY'] = secrets_dict["google_maps_key"]
 app.register_blueprint(wedding, url_prefix='/wedding')
 
 if __name__ == "__main__":

@@ -1,18 +1,23 @@
-Dear {{ form.name }},
+Kedves {{ form.name }},
 
-Thanks for responding to our invitation to the wedding! You said {{ form.number}} of your party were attending. {% if attending %}We'll see you in October!{% else %}We're sorry you can't make it! But we know you'll be celebrating with us from afar.{% endif %}
+Köszönjük, hogy visszajeleztél. Azt írtad, hogy összesen {{ form.number }} vendégre számíthatunk tőletek. {% if attending %} Találkozunk áprilisban! {% else %} Sajnáljuk, hogy most nem tudunk találkozni. Pótoljuk be minél hamarabb! {% endif %}
 
-Feel free to return to the wedding website at [ davenquinn.com/wedding ] for answers to any questions you might have. If you're still searching (or just want to say hello!) feel free to email us at [ wedding@davenquinn.com ].
+Ha bármilyen további információra van szükséged, nézz szét a weboldalon [ https://www.doriesmartin.hu ]. Ha valamit kérdeznél tőlünk, vagy csak írnál nekünk, megteheted a [ doriesmartin+rsvp-reply@gmail.com ] email címen, vagy erre az emailre is válaszolhatsz.
 
-Yours,
-Beth and Daven
+Üdv,
+Dóri és Martin
 
-    October 11, 2014
-    Cary, North Carolina
+    2021. április 24.
+    Dunai Csónakház, Budapest
 
+
+{% if attending %}
+Vendégek:
+{{ form.name_list }}
+{% endif %}
 
 {% if form.message %}
-Below is the message that you sent us:
+Az alábbi üzenetet külded nekünk:
 ------------------------
 {{ form.message }}
 {% endif %}
