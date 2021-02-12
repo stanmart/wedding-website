@@ -2,10 +2,7 @@ google = window.google
 
 style = [
   {
-    stylers: [
-      {
-        hue: "#00aaff"
-      }
+    stylers: [  
       {
         saturation: -10
       }
@@ -17,28 +14,28 @@ style = [
       }
     ]
   }
-    {
-      featureType: "landscape.natural"
-      stylers: [
-        {
-          visibility: "on"
-        }
-        {
-          color: "#a2d398"
-        }
-      ]
-    }
-    {
-        featureType: "landscape.man_made"
-        stylers: [
-          {
-            visibility: "on"
-          }
-          {
-            color: "#BFDD9D"
-          }
-        ]
-    }
+    # {
+    #   featureType: "landscape.natural"
+    #   stylers: [
+    #     {
+    #       visibility: "on"
+    #     }
+    #     {
+    #       color: "#A3BDB2"
+    #     }
+    #   ]
+    # }
+    # {
+    #     featureType: "landscape.man_made"
+    #     stylers: [
+    #       {
+    #         visibility: "on"
+    #       }
+    #       {
+    #         color: "#A3BDB2"
+    #       }
+    #     ]
+    # }
     {
         featureType: "transit"
         elementType: "labels"
@@ -49,64 +46,64 @@ style = [
         elementType: "labels"
         stylers: [visibility: "off"]
     }
-    {
-        featureType: "water"
-        stylers: [
-          {
-            visibility: "on"
-          }
-          {
-            color: "#d3eef5"
-          }
-        ]
-    }
-    {
-    featureType: "water"
-    elementType: "labels"
-    stylers: [visibility: "off"]
-    }
-    {
-    featureType: "road"
-    elementType: "labels.icon"
-    stylers: [visibility: "off"]
-    }
-  {
-    featureType: "road"
-    elementType: "labels.text.fill"
-    stylers: [
-      {
-        visibility: "on"
-      }
-      {
-        lightness: 24
-      }
-    ]
-  }
-  {
-    featureType: "road"
-    elementType: "geometry.fill"
-    stylers: [color: "#78cfed"]
-  }
-    {
-        featureType: "road.highway"
-        elementType: "geometry.fill"
-        stylers: [color: "#9b8ac1"]
-    }
-{
-    featureType: "road.highway"
-    elementType: "geometry.stroke"
-    stylers: [color: "#799ECC"]
-}
-  {
-      featureType: "road.highway.controlled_access"
-      elementType: "geometry.stroke"
-      stylers: [color: "#8067ad"]
-  }
- {
-     featureType: "road.highway.controlled_access"
-     elementType: "geometry.fill"
-     stylers: [color: "#9a8cbd"]
- }
+#     {
+#         featureType: "water"
+#         stylers: [
+#           {
+#             visibility: "on"
+#           }
+#           {
+#             color: "#d3eef5"
+#           }
+#         ]
+#     }
+#     {
+#     featureType: "water"
+#     elementType: "labels"
+#     stylers: [visibility: "on"]
+#     }
+#     {
+#     featureType: "road"
+#     elementType: "labels.icon"
+#     stylers: [visibility: "off"]
+#     }
+#   {
+#     featureType: "road"
+#     elementType: "labels.text.fill"
+#     stylers: [
+#       {
+#         visibility: "on"
+#       }
+#       {
+#         lightness: 24
+#       }
+#     ]
+#   }
+#   {
+#     featureType: "road"
+#     elementType: "geometry.fill"
+#     stylers: [color: "#8f7666"]
+#   }
+#     {
+#         featureType: "road.highway"
+#         elementType: "geometry.fill"
+#         stylers: [color: "#8f7666"]
+#     }
+# {
+#     featureType: "road.highway"
+#     elementType: "geometry.stroke"
+#     stylers: [color: "#8f7666"]
+# }
+#   {
+#       featureType: "road.highway.controlled_access"
+#       elementType: "geometry.stroke"
+#       stylers: [color: "#8f7666"]
+#   }
+#  {
+#      featureType: "road.highway.controlled_access"
+#      elementType: "geometry.fill"
+#      stylers: [color: "#8f6c66"]
+#  }
 ]
 
 module.exports = (el)->
@@ -130,10 +127,10 @@ module.exports = (el)->
 
     circle =
         path: google.maps.SymbolPath.CIRCLE
-        fillColor: "#7d6aaa"
+        fillColor: "#668f7d"
         fillOpacity: 0.8
         scale: 6
-        strokeColor: "#5d3393"
+        strokeColor: "#3D554B"
         strokeWeight: 2
 
     marker = new google.maps.Marker
