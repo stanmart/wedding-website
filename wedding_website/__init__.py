@@ -4,7 +4,8 @@ from .rsvp import complete_rsvp
 
 wedding = Blueprint('wedding', __name__,
         template_folder='templates',
-        static_folder='static')
+        static_folder='static',
+        static_url_path='/static/wedding')
 
 @wedding.route('/')
 def index():
@@ -14,9 +15,9 @@ def index():
 def details():
     return render_template('wedding/details.html', active='.details')
 
-@wedding.route('/story/')
-def story():
-    return render_template('wedding/story.html', active='.story')
+@wedding.route('/photos/')
+def photos():
+    return render_template('wedding/photos.html', active='.photos')
 
 @wedding.route('/rsvp/', methods=['GET', 'POST'])
 def rsvp():
@@ -26,10 +27,10 @@ def rsvp():
             try:
                 complete_rsvp(current_app, request.form)
             except Exception as err:
-                flash("There was an error submitting the form: "+str(err), "error")
+                flash("Nem sikerült beküldeni a formot: "+str(err), "error")
             else:
-                msg = """Your response was successfully processed!
-                 You should receive an email confirmation at
+                msg = """A válaszodat sikeresen rögzítettük.
+                 Nemsokára emailben is kapsz egy megerősítést a következő címen:
                  {0}.""".format(request.form["email"])
                 flash(msg,"success")
                 return render_template('wedding/rsvp_form.html')

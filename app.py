@@ -43,7 +43,7 @@ app.config.from_object(TestConfig)
 
 # We need a google maps key set now
 app.config['GOOGLE_MAPS_KEY'] = secrets_dict["google_maps_key"]
-app.register_blueprint(wedding, url_prefix='/wedding')
+app.register_blueprint(wedding, url_prefix="/")
 
 if __name__ == "__main__":
     app.run(debug=True)

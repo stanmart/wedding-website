@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta id="view" name="viewport" content="width=device-width" />
         <link href='//fonts.googleapis.com/css?family=Noticia+Text:400,700,400italic|Raleway:400,300,500' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{{url_for('wedding.static',filename='wedding.css')}}">
+        <link rel="stylesheet" href="{{url_for('.static',filename='wedding.css')}}">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?{% if config.GOOGLE_MAPS_KEY -%}
            key={{ config.GOOGLE_MAPS_KEY }}&{% endif %}sensor=false"></script>
@@ -19,7 +19,7 @@
                 <header>
                     <div class="title-block">
                         <h1 id="site-title">
-                          <a href="{{ url_for('.index') }}">
+                          <a href="{{ url_for('wedding.index') }}">
                                 {% include "wedding/logo.svg" %}
                             </a>
                         </h1>
@@ -32,7 +32,7 @@
                     <ul id="nav">
                         {{ nav_link("wedding.details","Részletek") }}
                         {{ nav_link("wedding.rsvp","RSVP") }}
-                        {{ nav_link("wedding.story", "Fényképek") }}
+                        {{ nav_link("wedding.photos", "Fényképek") }}
                     </ul>
                 </header>
                 <div id="content">
@@ -45,7 +45,7 @@
             <p>Site designed by with love by <a href="/">the groom</a>.
         </footer> -->
         {% block scripts %}
-        <script src="{{url_for('.static',filename='wedding.js')}}"></script>
+        <script src="{{url_for('wedding.static',filename='wedding.js')}}"></script>
         {% endblock %}
         {% include "analytics.html" ignore missing %}
     </body>

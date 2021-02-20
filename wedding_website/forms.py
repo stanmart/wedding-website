@@ -1,6 +1,6 @@
 from flask_wtf import Form
 from wtforms import TextField, IntegerField, TextAreaField, SubmitField
-from wtforms.validators import Required, Email, Length, ValidationError
+from wtforms.validators import Required, Email, Length, ValidationError, URL
 
 def no_robots(form, field):
     if len(field.data) is not 0:
@@ -9,11 +9,10 @@ def no_robots(form, field):
 def required(form, field):
     if field.data is None:
         raise ValidationError("Ezt a mezőt kötelező kitölteni")
-
 class RSVPForm(Form):
       name = TextField('Név', [Required(), Length(5)])
       email = TextField('Email cím',
-          [Required(), Email()])
+          [Required(), Email(message="Érvénytelen email cím")])
       factoid = TextField('Another form of ID', [no_robots])
       number = IntegerField(
           'Vendégek száma',
