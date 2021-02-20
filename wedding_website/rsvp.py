@@ -46,24 +46,27 @@ def save_file(app, form):
 
     time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     fn = "{0} {1}.txt".format(form["name"],time)
-    directory = Path(path)/"wedding-responses"
+    directory = Path(path) / "wedding-responses"
 
     try:
         directory.mkdir()
     except FileExistsError:
         pass
 
+    attending = ", ".join(form["name_list"].splitlines())
+
     with (directory/fn).open("w") as f:
         def w(s):
             print(s, file=f)
-        w("Name: "+form["name"])
-        w("Email:"+form["email"])
-        w("No. attending: "+str(form["number"]))
-        w("Guest names: {}".format(", ".join(form["name_list"].split("\n"))))
+            print(s)
+        w("Name: {}".format(form["name"]))
+        w("Email: {}".format(form["email"]))
+        w("No. attending: {}".format(form["number"]))
+        w("Guest names: {}".format(attending))
+        w("--------")
         w("Message:")
         w(form["message"])
 
 def complete_rsvp(app, form):
-    # save_file(app, form)
+    save_file(app, form)
     send_mail(app, form)
-

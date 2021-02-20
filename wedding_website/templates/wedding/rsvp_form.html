@@ -11,7 +11,7 @@
 {% endwith %}
 
 {% if form %}
-<form method="POST" action="/wedding/rsvp/">
+<form method="POST" action="/rsvp/">
     {{ form.csrf_token }}
     <dl>
         {{ render_field(form.name) }}

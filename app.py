@@ -34,7 +34,7 @@ class TestConfig(object):
     # enable saving of responses locally
     # as plain text (useful as a backstop
     # for weird email issues).
-    STORAGE_BASE = None
+    STORAGE_BASE = "/data"
 
 app = Flask(__name__)
 
