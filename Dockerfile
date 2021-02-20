@@ -41,17 +41,12 @@ RUN compass compile -e production
 RUN node_modules/.bin/browserify -t coffeeify frontend/index.coffee -o wedding_website/static/wedding.js
 
 
-FROM python:3.8-alpine AS prod
+FROM tiangolo/meinheld-gunicorn AS prod
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
-COPY wedding_website wedding_website
-COPY --from=build-proc wedding_website/static/wedding.* wedding_website/static
-COPY ./app.py .
-COPY ./secrets.json .
-
-ENV FLASK_APP=app.py
-EXPOSE 5000
-
-ENTRYPOINT ["flask", "run", "--host", "0.0.0.0"]
+COPY ./wedding_website ./app/wedding_website
+COPY --from=build-proc ./wedding_website/static/wedding.* ./app/wedding_website/static
+COPY ./app.py ./app/main.py
+COPY ./secrets.json ./secrets.json

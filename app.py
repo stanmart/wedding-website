@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 from flask import Flask
-from wedding_website import wedding
+from .wedding_website import wedding
 import os
 import json
 
