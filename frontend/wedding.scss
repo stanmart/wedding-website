@@ -246,10 +246,22 @@ strong {
     color: $medium-green;
 }
 
+strong.alert {
+    color: #f15b5b
+}
+
 a.button {
     @include button($medium-green);
     padding: 0.2em 0.5em;
     background: $light-green;
+}
+
+a.email {
+    color: $medium-green;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 $map-height: 10rem;

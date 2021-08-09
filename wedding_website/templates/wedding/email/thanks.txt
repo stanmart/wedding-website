@@ -1,13 +1,13 @@
 Kedves {{ form.name }},
 
-Köszönjük, hogy visszajeleztél. Azt írtad, hogy összesen {{ form.number }} vendégre számíthatunk Tőletek. {% if attending %} Találkozunk áprilisban! {% else %} Sajnáljuk, hogy most nem tudunk találkozni. Pótoljuk be minél hamarabb! {% endif %}
+Köszönjük, hogy visszajeleztél. Azt írtad, hogy összesen {{ form.number }} vendégre számíthatunk Tőletek. {% if attending %} Találkozunk augusztusban! {% else %} Sajnáljuk, hogy most nem tudunk találkozni. Pótoljuk be minél hamarabb! {% endif %}
 
 Ha bármilyen további információra van szükséged, nézz szét a weboldalon [ https://www.doriesmartin.hu ]. Ha valamit kérdeznél tőlünk, vagy csak írnál nekünk, megteheted a [ doriesmartin+rsvp-reply@gmail.com ] email címen, vagy erre az emailre is válaszolhatsz.
 
 Üdv,
 Dóri és Martin
 
-    2021. április 24.
+    2021. augusztus 21.
     Dunai Csónakház, Budapest
 
 
