@@ -1,12 +1,11 @@
 {% extends "wedding/base.html" %}
 
 {% block content %}
-<p><strong class=alert>Időpontváltozás: a COVID helyzet miatt az esküvőt áttettük augusztus 21-re. További információk a részletek menüpontban.</strong>
-</p>
+<h2 id=tagline>Köszönjük, hogy velünk ünnepeltetek!</h2>
+<p>Reméljük, hogy ti is nagyon jól éreztétek magatokat. Az esküvőn készült fényképeket <a class=email href="{{ url_for('wedding.photos') }}">itt találjátok</a>.</p>
 <img src="{{url_for('.static', filename='images/lego/front_pic.jpg')}}"
      alt="Meghívó legós kép" />
-<h2 id=tagline>Az előzetes várakozásoknak eleget téve hivatalos formában is összekötjük életünket!</h2>
-<p>Szeretnénk, ha Te is részese lennél ennek a különleges napnak.</p>
+
 
 
 {% endblock %}
