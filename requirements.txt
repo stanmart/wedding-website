@@ -1,5 +1,5 @@
-Flask
-Flask-Mail
-Flask-WTF
-WTForms
-email_validator
+Flask==2.0.1
+Flask-Mail==0.9.1
+Flask-WTF==0.15.1
+WTForms==2.3.3
+email_validator==1.1.3
